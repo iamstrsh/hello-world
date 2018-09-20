@@ -1,2 +1,19 @@
-# hello-world
-php 61*
+<?php
+
+function getEvenNumbersUpTo($num)
+{
+    $counter = 1;
+    $result = '';
+
+    while ($counter <= $num) {
+        if ($counter % 2 === 0){
+            $result = $result . $counter . ",";
+        }
+
+        $counter += 1;
+    }
+    $dot = substr($result, 0, strlen($result) - 1) . ".";
+    return $dot;
+}
+print_r(getEvenNumbersUpTo(15));
+?>
